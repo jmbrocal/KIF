@@ -581,7 +581,7 @@ static BOOL KIFUITestActorAnimationsEnabled = YES;
         id<UITextInput> textInput = (id<UITextInput>)view;
         [textInput setSelectedTextRange:[textInput textRangeFromPosition:textInput.beginningOfDocument toPosition:textInput.endOfDocument]];
         
-        [self waitForTimeInterval:0.1 relativeToAnimationSpeed:YES];
+        [self waitForTimeInterval:2 relativeToAnimationSpeed:YES];
         [self enterTextIntoCurrentFirstResponder:@"\b" fallbackView:view];
     } else {
         NSUInteger numberOfCharacters = [view respondsToSelector:@selector(text)] ? [(UITextField *)view text].length : element.accessibilityValue.length;
